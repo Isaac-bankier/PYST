@@ -12,4 +12,4 @@ def banner(text, pretext="* ", posttext=" *", banner="*"):
     finalBanner = bannerPart + "\n" + bannerText + "\n" + bannerPart # The final banner
     return finalBanner
 
-print(banner("Linux is the only real os"))
+print(banner(input("What is the message for your banner: ")))

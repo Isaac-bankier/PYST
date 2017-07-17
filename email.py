@@ -58,4 +58,4 @@ def validate(email, verbos=False):
     return valid
 
 
-print(validate(input("Please enter the email to be checked")))
+print(validate(input("Please enter the email to be checked: ")))
