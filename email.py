@@ -4,6 +4,8 @@
 #      By Isaac Bankier      #
 ##############################
 
+#TODO add auto correct
+
 def validate(email, verbos=False):
     """Email validator"""
     valid = True #Assume the email is valid
