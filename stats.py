@@ -1,4 +1,8 @@
-import statistics
+###############################
+#          stats.py           #
+#    Statistics calculator    #
+#      By Isaac Bankier       #
+###############################
 
 def mean(dataSet):
     sum = 0
@@ -17,16 +21,14 @@ def median(dataSet):
     return medianIndex
 
 def mode(dataSet):
-    dataSetLength = len(dataSet)
-    dataSetExclusiveLength = len(list(set(dataSet)))
-
-    workingSet = zip(list(set(dataSet))), list(map(int, list("0"*dataSetExclusiveLength)))
-
+    exclusive = list(set(dataSet))
+    dictionary = dict.fromkeys(exclusive, 0)
     for data in dataSet:
-        workingl
+        dictionary[data] += 1
+    answer = sorted(list(map(lambda x: str(dictionary[x])+"|"+str(x), list(dictionary.keys()))))[-1].split("|")[1]
+    return answer
 
 options = {"1": mean, "2": median, "3": mode}
-
 choice = input("""Welcome to the statistics calculator. Do you want to do:
 1) Find the mean
 2) Find the median
@@ -35,4 +37,4 @@ choice = input("""Welcome to the statistics calculator. Do you want to do:
 :""")
 
 function = options[choice]
-print(function([1, 2, 3, 4]))
+print(function([1, 2, 3, 4, 4, 4]))
