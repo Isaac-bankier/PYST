@@ -25,7 +25,7 @@ def mode(dataSet):
     dictionary = dict.fromkeys(exclusive, 0)
     for data in dataSet:
         dictionary[data] += 1
-    answer = sorted(list(map(lambda x: str(dictionary[x])+"|"+str(x), list(dictionary.keys()))))[-1].split("|")[1]
+    answer = sorted(list(map(lambda x: [dictionary[x], x], list(dictionary.keys()))))[-1][1]
     return answer
 
 options = {"1": mean, "2": median, "3": mode}
@@ -37,4 +37,4 @@ choice = input("""Welcome to the statistics calculator. Do you want to do:
 :""")
 
 function = options[choice]
-print(function([1, 2, 3, 4, 4, 4]))
+print(function([5, 5, 5, 5, 1, 2, 3, 4, 4, 4]))
