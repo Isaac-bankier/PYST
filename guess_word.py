@@ -7,18 +7,34 @@
 import random
 
 class game(object):
-    def __init__(self):
+    def __init__(self, words=["linux", "onion", "github", "firefox", "gimp", "kernal"], guesses=7):
+        self.words = words
+        self.maxGuesses = guesses
         self.word = ""
-        self.chars = []
-        self.guessed = []
-        self.guessesLeft = 0
-        self.words = ["gnu", "linux", "onion", "kernal", "tux", "git", "github", "curry"]
+        self.guesses = 0
 
-    def newGame(self):
-        self.word = random.choice(words)
-        self.chars = list(self.word)
-        self.guessed = []
-        self.guessesLeft = len(word) * 2
+    def start(self):
+        self.word = list(random.choice(self.words))
+        return self.word
 
-    def guess(self):
-        
+    def canPlay(self):
+        return (self.guesses < self.maxGuesses) and (not (len(self.word) == 0))
+
+    def guess(self, char):
+        try:
+            self.word.remove(char)
+            if len(self.word) == 0:
+                return "You win!"
+        except ValueError:
+            self.guesses += 1
+            if self.guesses == self.maxGuesses:
+                return "Game over!"
+            return "Wrong. You have " + str(self.maxGuesses - self.guesses) + " guesses left. "
+
+
+        return "Correct. You have " + str(self.maxGuesses - self.guesses) + " guesses left. "
+
+g = game()
+print(g.start())
+while g.canPlay():
+    print(g.guess(input("Guess: ")[0]))
