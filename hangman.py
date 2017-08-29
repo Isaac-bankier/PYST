@@ -1,6 +1,6 @@
 ##############################
-#        guess_word.py       #
-#       Guess the word       #
+#         hangman.py         #
+#           hangman          #
 #      By Isaac Bankier      #
 ##############################
 
