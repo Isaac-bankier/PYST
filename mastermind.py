@@ -63,6 +63,6 @@ class game(object):
         return "You had "+str(samePlace)+" in the correct place and "+str(sameType)+" of the correct type. You have "+str(self.maxGuesses - self.guesses)+" turns left."
 
 g = game()
-print(g.start())
+g.start()
 while g.canPlay():
     print(g.guess(input("Guess: ")))

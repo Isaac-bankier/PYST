@@ -41,6 +41,6 @@ class game(object):
         return "Correct. You have " + str(self.maxGuesses - self.guesses) + " guesses left. "
 
 g = game()
-print(g.start())
+g.start()
 while g.canPlay():
     print(g.guess(input("Guess: ")[0]))
