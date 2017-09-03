@@ -3,7 +3,7 @@
 #       Email validator      #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 #TODO add auto correct
 
 def validate(email, verbos=False):

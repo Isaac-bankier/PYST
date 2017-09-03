@@ -3,7 +3,7 @@
 # Check if a char is a vowel #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 # I tried to teach people a new swear word with no consonants in it...
 # Apparently it was vowel language
 

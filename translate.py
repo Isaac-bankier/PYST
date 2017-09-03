@@ -3,7 +3,7 @@
 #       Translate to R       #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 #TODO add more comments
 
 def IsVowel(char):

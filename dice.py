@@ -3,7 +3,7 @@
 #    Simulate a dice roll    #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 import random # Import the random library
 
 roll = True # The user wants to roll when they run the program.

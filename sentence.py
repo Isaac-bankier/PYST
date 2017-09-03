@@ -10,6 +10,7 @@
 def inPlace(string):
     words = string.split(" ")
     newString = ""
+    #Loop through the words and add the length of each word to the new string
     for word in words:
         newString += str(len(word)) + " "
     print(newString)
@@ -19,5 +20,4 @@ def table(string):
     for word in words:
         print(word + " | " + str(len(word)))
 
-table("This is a random test string")
-inPlace("This is a random test string")
+inPlace(input("Enter stuff: "))

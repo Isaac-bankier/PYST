@@ -3,7 +3,7 @@
 #   99 bottles of juice...   #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 #TODO replace the temp strings
 
 def juicer(iterations=99):
@@ -21,5 +21,5 @@ Take one down, pass it around, gnu bottles of juice on the wall.
         iterations -= 1 # use up one bottle of juice each iteration
 
     return
-    
+
 juicer(5)

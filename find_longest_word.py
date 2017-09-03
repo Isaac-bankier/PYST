@@ -6,10 +6,10 @@
 
 lengths = {}
 
-def table(string):
-    words = string.split(" ")
-    for word in words:
-        lengths[len(word)] = word
-    return (lengths[sorted(lengths.keys())[::-1][0]], lengths[sorted(lengths.keys())[::-1][0]])
+def longest_word(string):
+    words = string.split(" ") #Split the word
+    for word in words: #Loop through the words
+        lengths[len(word)] = word #add the word length to a dictionary and store the word as its value
+    return (lengths[sorted(lengths.keys())[::-1][0]], lengths[sorted(lengths.keys())[::-1][0]]) #sort the lengths of words and return the longest word and its length
 
 print(table("This is a random test string."))

@@ -3,7 +3,7 @@
 #      Banner generator      #
 #      By Isaac Bankier      #
 ##############################
-
+ 
 #TODO add pattern support
 
 def banner(text, pretext="| ", posttext=" |", banner="="):
